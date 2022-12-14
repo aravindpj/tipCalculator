@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+html,body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    background-color:hsl(185, 41%, 84%);
+}
+p{
+    margin: 0;
+}
+.main-body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-containor{
+    flex: 1;
+    background-color:  hsl(0, 0%, 100%);
+    max-width: 690px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 20px;
+    z-index: 1;  
+}
+.calculation-container{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-left: 10px;
+}
+
+.inp-field{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 280px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    padding-right: 10px;
+}
+.select-tip{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tip-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    color:hsl(0, 0%, 100%) ;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tip-btn:hover{
+    background-color:hsl(185, 41%, 84%)  ;
+}
+.col1,.col2{
+    display:grid;
+    grid-template-columns: 89px 89px 89px;
+    column-gap: 10px;
+    
+}
+.amount-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result-view{
+    flex: 1;
+    max-width:290px ;
+    background-color:hsl(183, 100%, 15%);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color:hsl(0, 0%, 100%) ;
+    border-radius: 18px;
+    height: 276px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.p{
+    font-size: 13px;
+    font-weight: 700;
+    color:hsl(186, 14%, 43%)
+}
+.p1{
+    font-size: 13px;
+}
+.p2{
+    font-size: 12px;
+    color: hsl(185, 41%, 84%)
+}
+.reset-btn{ 
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%) ;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logo-container{
+    position: fixed;
+   left: 47%;
+   right: 50%;
+   top: 50px;
+
+}
+.people-count{
+    position: relative;
+}
+.error-msg{
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    top: -3px;
+    right: 2px;
+}
+.tip-inp{
+    border-radius: 5px ;
+    border-style: solid;
+}
+.activate{
+    background-color:hsl(185, 41%, 84%) ;
+}
+input{
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;   
+}
+
+input[type=text]:focus{
+    
+    outline: 2px solid hsl(172, 67%, 45%);     /* oranges! yey */
+  }
+
+
+@media(max-width:320px){
+    html,body{
+        background-color: hsl(185, 41%, 84%);
+    }
+    .calculator-containor{
+        margin-top: 100px;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: -10px;
+        border-radius: 50px;
+        
+    }
+
+    .logo-container{
+      display: none;
+    }
+}
